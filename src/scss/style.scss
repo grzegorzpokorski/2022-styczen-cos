@@ -1,4 +1,96 @@
-@import './global_variables';
 @import './bootstrap/bootstrap';
 @import './fontawesome';
 @import './font';
+
+p:last-child{
+	margin-bottom: 0;
+}
+
+.btn{
+	text-transform: uppercase;
+}
+
+.btn-green{
+	color: $white;
+	
+	&:hover,
+	&:focus{
+		color: $white;
+	}
+}
+
+.bg-image{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+
+	&--white-green{
+		&:after{
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba($white-green, .95);
+			z-index: -1;
+		}
+	}
+
+	&--green{
+		&:after{
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba($green, .95);
+			z-index: -1;
+		}
+	}
+}
+
+.boxes{
+	&__box-inner{
+		border-bottom: .2rem solid transparent;
+		transition: all .35s;
+
+		&:hover{
+			border-color: $green;
+		}
+	}
+}
+
+.list-ticks{
+	list-style: none;
+
+	& li{
+
+		&:before{
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			font-size: 2em;
+			content: '\f00c';
+			color: $green;
+			margin-right: 1em;
+			margin-top: -.2em;
+		}
+	}
+}
+
+.features{
+	&__item{
+
+		&:hover &__icon{
+			transform: scale(1.5);
+		}
+
+		&__text{
+			font-size: $font-size-base * 1;
+			padding: 1.2rem;
+		}
+		&__icon{
+			font-size: $font-size-base * 2;
+			vertical-align: middle;
+			transition: all .35s;
+		}
+	}
+}

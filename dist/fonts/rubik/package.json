@@ -1,0 +1,58 @@
+{
+  "_from": "@fontsource/rubik",
+  "_id": "@fontsource/rubik@4.5.1",
+  "_inBundle": false,
+  "_integrity": "sha512-HJPvEROpyC1//FtgVzWYV+oYByFxY4rT97c6wmbaKCjq14Jn7Duqfz/TgT7RTvbpyOUrzlzXJZkp5SyS1udmVw==",
+  "_location": "/@fontsource/rubik",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@fontsource/rubik",
+    "name": "@fontsource/rubik",
+    "escapedName": "@fontsource%2frubik",
+    "scope": "@fontsource",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@fontsource/rubik/-/rubik-4.5.1.tgz",
+  "_shasum": "247f01ae16542cb2d43542dff713030fa50c7126",
+  "_spec": "@fontsource/rubik",
+  "_where": "C:\\_MOJE\\Programowanie\\html\\2022-styczen-cos\\html",
+  "author": {
+    "name": "Lotus",
+    "email": "declininglotus@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/fontsource/fontsource/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Self-host the Rubik font in a neatly bundled NPM package.",
+  "homepage": "https://github.com/fontsource/fontsource/tree/master/packages/rubik#readme",
+  "keywords": [
+    "fontsource",
+    "font",
+    "font family",
+    "google fonts",
+    "Rubik",
+    "rubik"
+  ],
+  "license": "MIT",
+  "main": "index.css",
+  "name": "@fontsource/rubik",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fontsource/fontsource.git",
+    "directory": "packages/rubik"
+  },
+  "version": "4.5.1"
+}
