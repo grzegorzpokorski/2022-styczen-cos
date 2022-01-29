@@ -23,7 +23,7 @@ p:last-child{
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	position: relative;
 	z-index: 1;
 
@@ -71,8 +71,9 @@ p:last-child{
 			font-size: 2em;
 			content: '\f00c';
 			color: $green;
-			margin-right: 1em;
 			margin-top: -.2em;
+			margin-right: .8em;
+			margin-left: .5em;
 		}
 	}
 }
@@ -92,6 +93,112 @@ p:last-child{
 			font-size: $font-size-base * 2;
 			vertical-align: middle;
 			transition: all .35s;
+		}
+	}
+}
+
+.timeline{
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 1.2rem;
+		width: .125rem;
+		background-color: $green;
+	}
+
+	&__item{
+		position: relative;
+
+		@include media-breakpoint-up(lg){
+			&:nth-child(even){
+				margin-left: auto;
+
+				&:before{
+					left: -.5em;
+				}
+			}
+
+			&:nth-child(odd){
+				&:before{
+					right: -.5em;
+				}
+			}
+
+			&:first-child,
+			&:last-child{
+				&:after{
+					left: calc(100% - .0625rem) !important;
+				}
+			}
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			height: 1rem;
+			width: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			background: $white;
+			border: .2em solid $green;
+			border-radius: 1em;
+			box-shadow: 0 0 0em .2em $white;
+			transition: all .35s;
+		}
+
+		&:hover{
+			&:before{
+				background: $green;
+				border: .2em solid $white;
+				border-radius: 1em;
+				box-shadow: 0 0 0em .2em $green;
+			}
+		}
+
+		&:first-child{
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: calc(50% + .6em);
+				left: .4375rem;
+				width: .125rem;
+				background-color: $white-green;
+			}
+		}
+
+		&:last-child{
+			&:after{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				top: calc(50% + .6em);
+				left: .4375rem;
+				width: .125rem;
+				background-color: $white-green;
+			}
+		}
+
+		@include media-breakpoint-up(lg){
+			&:nth-child(odd) div{
+				margin-left: 0;
+				margin-right: $spacer * 2;
+			}
+		}
+
+		&__inner{
+			margin-left: $spacer * 2;
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+		&:before{
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 }
