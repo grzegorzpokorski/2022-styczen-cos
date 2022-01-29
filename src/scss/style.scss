@@ -261,3 +261,39 @@ p:last-child{
 		font-size: $font-size-base 
 	}
 }
+
+.blockquote{
+	font-size: $font-size-base * 1.2;
+	font-weight: $font-weight-normal;
+	position: relative;
+
+	&:before{
+		content: '\f10e';
+		position: absolute;
+		bottom: -$spacer * .5;
+		right: $spacer * 1;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 900;
+		font-size: 2em;
+		font-size: $font-size-base * 5;
+		color: rgba($green, .3);
+		opacity: .5;
+	}
+
+	&__sign{
+		margin-left: $spacer * 2;
+		position: relative;
+		color: $gray-light;
+
+		&:before{
+			content: '';
+			position: absolute;
+			width: $spacer * 1.2;
+			height: $spacer * .125;
+			background-color: $gray-light;
+			top: 50%;
+			transform: translateY(-50%);
+			left: $spacer * -2;
+		}
+	}
+}
