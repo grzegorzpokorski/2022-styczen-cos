@@ -81,6 +81,10 @@ p:last-child{
 .features{
 	&__item{
 
+		&__inner{
+			min-height: 7.5rem;
+		}
+
 		&:hover &__icon{
 			transform: scale(1.5);
 		}
@@ -200,5 +204,60 @@ p:last-child{
 			left: 50%;
 			transform: translateX(-50%);
 		}
+	}
+}
+
+.tags-list{
+	&__item{
+		font-size: $font-size-base * .7;
+		padding: $spacer * .4 $spacer * 1;		
+	}
+}
+
+.articles{
+	display: flex;
+	flex-flow: row wrap;
+	row-gap: $spacer * 3;
+
+	&__img-wrapper{
+		display: block;
+		position: relative;
+		overflow: hidden;
+		inset: 0;
+		height: auto;
+		width: 100%;
+	}
+
+	&__image{
+		inset: 0;
+		width: 100%;
+		object-fit: cover;
+		transition: all .35s;
+
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+
+	&__time{
+		position: relative;
+
+		&:after{
+			content: '';
+			position: absolute;
+			height: .1875rem;
+			width: .1875rem;
+			background-color: rgba($black, .2);
+			right: -.59375rem*2;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 50%;
+		}
+	}
+}
+
+.recent{
+	&__title{
+		font-size: $font-size-base 
 	}
 }
