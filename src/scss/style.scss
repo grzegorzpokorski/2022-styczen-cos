@@ -138,6 +138,11 @@ p:last-child{
 					left: calc(100% - .0625rem) !important;
 				}
 			}
+			&:last-child:nth-child(even){
+				&:after{
+					left: -.0625rem !important;
+				}
+			}
 		}
 
 		&:before{
